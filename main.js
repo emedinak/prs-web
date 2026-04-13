@@ -143,3 +143,11 @@ document.querySelectorAll('.drawer-links a, .drawer-cta').forEach(link => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeMenu();
 });
+
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.setAttribute('playsinline', '');
+  heroVideo.load();
+  heroVideo.play().catch(() => {});
+}
