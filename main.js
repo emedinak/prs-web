@@ -65,7 +65,7 @@ if (badgesEl) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         animateCounter(document.querySelector('.hero-badge:nth-child(1) .hero-badge-num'), 365);
-        animateCounter(document.querySelector('.hero-badge:nth-child(2) .hero-badge-num'), 20, '+');
+        animateCounter(document.querySelector('.hero-badge:nth-child(2) .hero-badge-num'), 5, '+');
         badgeObserver.disconnect();
       }
     });
