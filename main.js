@@ -143,3 +143,12 @@ document.querySelectorAll('.drawer-links a, .drawer-cta').forEach(link => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeMenu();
 });
+
+// Forzar autoplay del video hero en mobile
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.play().catch(() => {
+    // Si el navegador bloquea, mostrar poster estático
+  });
+}
