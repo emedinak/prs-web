@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
 <title>PRS – Pacific Repair Services</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,45 +12,65 @@
 </head>
 <body>
 
-<!-- Reemplaza tu <nav> actual con este -->
-  <nav id="nav">
-    <a href="#inicio" class="nav-logo">
-      <img src="assets/images/logo.png" alt="PRS Logo" class="nav-logo-img">
-      <span class="nav-tagline">Pacific Repair<br>Services</span>
-    </a>
-  
-    <ul class="nav-links">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#ventajas">Por qué PRS</a></li>
-      <li><a href="#quienes">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  
-    <a href="#contacto" class="nav-cta">Solicitar servicio</a>
-  
-    <!-- Botón hamburguesa (solo mobile) -->
-    <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
-  
-  <!-- Drawer del menú mobile -->
-  <div class="nav-drawer" id="navDrawer">
-    <ul class="drawer-links">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#ventajas">Por qué PRS</a></li>
-      <li><a href="#quienes">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <a href="#contacto" class="drawer-cta">Solicitar servicio</a>
+<!-- NAVBAR -->
+<nav id="nav">
+  <a href="#inicio" class="nav-logo">
+    <img src="assets/images/logo.png" alt="PRS Logo" class="nav-logo-img">
+    <span class="nav-tagline">Pacific Repair<br>Services</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
+    <li><a href="#ventajas" data-i18n="nav.why">Por qué PRS</a></li>
+    <li><a href="#quienes" data-i18n="nav.about">Nosotros</a></li>
+    <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="es" aria-label="Español">
+        <img src="assets/images/flag-ec.svg" alt="Ecuador" class="lang-flag">
+        <span>ES</span>
+      </button>
+      <button class="lang-btn" data-lang="en" aria-label="English">
+        <img src="assets/images/flag-us.svg" alt="USA" class="lang-flag">
+        <span>EN</span>
+      </button>
+    </div>
+    <a href="#contacto" class="nav-cta" data-i18n="nav.cta">Solicitar servicio</a>
   </div>
-  <div class="nav-overlay" id="navOverlay"></div>
+
+  <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Drawer mobile -->
+<div class="nav-drawer" id="navDrawer">
+  <div class="drawer-lang">
+    <button class="lang-btn active" data-lang="es" aria-label="Español">
+      <img src="assets/images/flag-ec.svg" alt="Ecuador" class="lang-flag">
+      <span>ES</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-label="English">
+      <img src="assets/images/flag-us.svg" alt="USA" class="lang-flag">
+      <span>EN</span>
+    </button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
+    <li><a href="#ventajas" data-i18n="nav.why">Por qué PRS</a></li>
+    <li><a href="#quienes" data-i18n="nav.about">Nosotros</a></li>
+    <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <a href="#contacto" class="drawer-cta" data-i18n="nav.cta">Solicitar servicio</a>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-  <!-- Video background -->
   <div class="hero-video-wrap">
     <video class="hero-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture>
       <source src="assets/videos/containers-hero.mp4" type="video/mp4">
@@ -57,121 +78,116 @@
     <div class="hero-overlay"></div>
   </div>
 
-  <!-- Content -->
   <div class="hero-content">
-    <p class="hero-tag">Pacific Repair Services</p>
-    <h1 class="hero-title">
-      Reparación y <em>mantenimiento</em> de contenedores
-    </h1>
-    <p class="hero-sub">
-      Somos líderes en reparación y mantenimiento de contenedores marítimos. Soluciones integrales de alta calidad para la industria del transporte mundial, disponibles los 365 días del año.
-    </p>
+    <p class="hero-tag" data-i18n="hero.tag">Pacific Repair Services</p>
+    <h1 class="hero-title" data-i18n="hero.title">Reparación y <em>mantenimiento</em> de contenedores</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Somos líderes en reparación y mantenimiento de contenedores marítimos. Soluciones integrales de alta calidad para la industria del transporte mundial, disponibles los 365 días del año.</p>
     <div class="hero-actions">
-      <a href="#contacto" class="btn-primary">Solicitar servicio</a>
-      <a href="#servicios" class="btn-ghost">Ver servicios</a>
+      <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Solicitar servicio</a>
+      <a href="#servicios" class="btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
     </div>
   </div>
 
-  <!-- Floating badges -->
   <div class="hero-badges">
     <div class="hero-badge">
       <div class="hero-badge-num">365</div>
-      <div class="hero-badge-label">días del año</div>
+      <div class="hero-badge-label" data-i18n="hero.badge1">días del año</div>
     </div>
     <div class="hero-badge">
       <div class="hero-badge-num">5+</div>
-      <div class="hero-badge-label">años de trayectoria</div>
+      <div class="hero-badge-label" data-i18n="hero.badge2">años de trayectoria</div>
     </div>
   </div>
 </section>
 
 <!-- SERVICIOS -->
 <section id="servicios">
-    <p class="section-label fade-up">Lo que ofrecemos</p>
-    <h2 class="section-title fade-up">Servicios</h2>
-    <p class="section-sub fade-up">Soluciones completas de reparación, mantenimiento y certificación para contenedores navieros secos y refrigerados.</p>
-  
-    <div class="carousel">
-      <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#8592;</button>
-      <div class="carousel-track-wrap">
-        <div class="carousel-track" id="carouselTrack">
-            <div class="carousel-card"><img src="assets/images/service1.png" alt="">Inspección y Diagnóstico de Contenedores</div>
-            <div class="carousel-card"><img src="assets/images/service2.png" alt="">Reparación Estructural y de Puertas</div>
-            <div class="carousel-card"><img src="assets/images/service3.png" alt="">Mantenimiento Preventivo y Correctivo</div>
-            <div class="carousel-card"><img src="assets/images/service4.png" alt="">Pintura y Reacondicionamiento</div>
-            <div class="carousel-card"><img src="assets/images/service5.png" alt="">Gestión de Checklist y Reportes Técnicos</div>
-        </div>
+  <p class="section-label fade-up" data-i18n="services.label">Lo que ofrecemos</p>
+  <h2 class="section-title fade-up" data-i18n="services.title">Servicios</h2>
+  <p class="section-sub fade-up" data-i18n="services.sub">Soluciones completas de reparación, mantenimiento y certificación para contenedores navieros secos y refrigerados.</p>
+
+  <div class="carousel">
+    <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#8592;</button>
+    <div class="carousel-track-wrap">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-card"><img src="assets/images/service1.png" alt=""><span data-i18n="services.s1">Inspección y Diagnóstico de Contenedores</span></div>
+        <div class="carousel-card"><img src="assets/images/service2.png" alt=""><span data-i18n="services.s2">Reparación Estructural y de Puertas</span></div>
+        <div class="carousel-card"><img src="assets/images/service3.png" alt=""><span data-i18n="services.s3">Mantenimiento Preventivo y Correctivo</span></div>
+        <div class="carousel-card"><img src="assets/images/service4.png" alt=""><span data-i18n="services.s4">Pintura y Reacondicionamiento</span></div>
+        <div class="carousel-card"><img src="assets/images/service5.png" alt=""><span data-i18n="services.s5">Gestión de Checklist y Reportes Técnicos</span></div>
+        <div class="carousel-card"><img src="assets/images/service6.png" alt=""><span data-i18n="services.s6">Estanqueidad</span></div>
+        <div class="carousel-card"><img src="assets/images/service7.png" alt=""><span data-i18n="services.s7">Inspección PTI</span></div>
+        <div class="carousel-card"><img src="assets/images/service8.png" alt=""><span data-i18n="services.s8">Venta y Alquiler de Contenedores</span></div>
+        <div class="carousel-card"><img src="assets/images/service9.png" alt=""><span data-i18n="services.s9">Proyectos Personalizados en Contenedores</span></div>
       </div>
-      <button class="carousel-btn next" onclick="moveCarousel(1)">&#8594;</button>
     </div>
-  </section>
+    <button class="carousel-btn next" onclick="moveCarousel(1)">&#8594;</button>
+  </div>
+</section>
 
 <!-- VENTAJAS -->
 <section id="ventajas">
-    <p class="section-label fade-up">Por qué elegirnos</p>
-    <h2 class="section-title fade-up">Ventajas de trabajar con PRS</h2>
-    <p class="section-sub fade-up">Más de 5 años de trayectoria en la industria del transporte marítimo, maquinaria europea y personal asegurado nos respaldan.</p>
-  
-    <div class="ventajas-grid">
-      <div class="ventaja-card fade-up">
-        <div class="ventaja-icon-wrap"><img src="assets/images/velocity.svg" alt="Rapidez"></div>
-        <div>
-          <h3 class="ventaja-title">Rapidez</h3>
-          <p class="ventaja-desc">Reparaciones ágiles y entregas a tiempo. Procedimientos estandarizados para una respuesta rápida sin sacrificar calidad.</p>
-        </div>
-      </div>
-  
-      <div class="ventaja-card fade-up">
-        <div class="ventaja-icon-wrap"><img src="assets/images/quality.svg" alt="Calidad"></div>
-        <div>
-          <h3 class="ventaja-title">Calidad</h3>
-          <p class="ventaja-desc">Maquinaria y herramientas de origen europeo que garantizan la excelencia en el acabado de cada trabajo realizado.</p>
-        </div>
-      </div>
-  
-      <div class="ventaja-card fade-up">
-        <div class="ventaja-icon-wrap"><img src="assets/images/services.svg" alt="Servicio"></div>
-        <div>
-          <h3 class="ventaja-title">Servicio personalizado</h3>
-          <p class="ventaja-desc">Atención directa y soluciones a medida. Personal asegurado y certificado en EPP para su tranquilidad y seguridad.</p>
-        </div>
-      </div>
-  
-      <div class="ventaja-card fade-up">
-        <div class="ventaja-icon-wrap"><img src="assets/images/efficiency.svg" alt="Eficiencia"></div>
-        <div>
-          <h3 class="ventaja-title">Eficiencia</h3>
-          <p class="ventaja-desc">Optimización de costos y tiempos. Servicio disponible los 365 días del año para adaptarse a los ciclos operativos de su flota.</p>
-        </div>
+  <p class="section-label fade-up" data-i18n="why.label">Por qué elegirnos</p>
+  <h2 class="section-title fade-up" data-i18n="why.title">Ventajas de trabajar con PRS</h2>
+  <p class="section-sub fade-up" data-i18n="why.sub">Más de 5 años de trayectoria en la industria del transporte marítimo, maquinaria europea y personal asegurado nos respaldan.</p>
+
+  <div class="ventajas-grid">
+    <div class="ventaja-card fade-up">
+      <div class="ventaja-icon-wrap"><img src="assets/images/velocity.svg" alt=""></div>
+      <div>
+        <h3 class="ventaja-title" data-i18n="why.v1title">Rapidez</h3>
+        <p class="ventaja-desc" data-i18n="why.v1desc">Reparaciones ágiles y entregas a tiempo. Procedimientos estandarizados para una respuesta rápida sin sacrificar calidad.</p>
       </div>
     </div>
-  </section>
+    <div class="ventaja-card fade-up">
+      <div class="ventaja-icon-wrap"><img src="assets/images/quality.svg" alt=""></div>
+      <div>
+        <h3 class="ventaja-title" data-i18n="why.v2title">Calidad</h3>
+        <p class="ventaja-desc" data-i18n="why.v2desc">Maquinaria y herramientas de origen europeo que garantizan la excelencia en el acabado de cada trabajo realizado.</p>
+      </div>
+    </div>
+    <div class="ventaja-card fade-up">
+      <div class="ventaja-icon-wrap"><img src="assets/images/services.svg" alt=""></div>
+      <div>
+        <h3 class="ventaja-title" data-i18n="why.v3title">Servicio personalizado</h3>
+        <p class="ventaja-desc" data-i18n="why.v3desc">Atención directa y soluciones a medida. Personal asegurado y certificado en EPP para su tranquilidad y seguridad.</p>
+      </div>
+    </div>
+    <div class="ventaja-card fade-up">
+      <div class="ventaja-icon-wrap"><img src="assets/images/efficiency.svg" alt=""></div>
+      <div>
+        <h3 class="ventaja-title" data-i18n="why.v4title">Eficiencia</h3>
+        <p class="ventaja-desc" data-i18n="why.v4desc">Optimización de costos y tiempos. Servicio disponible los 365 días del año para adaptarse a los ciclos operativos de su flota.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- NOSOTROS -->
 <section id="quienes">
   <div class="about-visual fade-up">
     <img class="about-img" src="assets/images/nostros.png" alt="Operaciones PRS">
     <div class="about-badge">
-      <div class="about-badge-num">Desde 2019</div>
+      <div class="about-badge-num" data-i18n="about.since">Desde 2019</div>
       <div class="about-badge-text">Pacific Repair Services</div>
     </div>
   </div>
 
   <div class="about-text">
-    <p class="section-label fade-up">Quiénes somos</p>
-    <h2 class="section-title fade-up">Especializados en contenedores marítimos</h2>
+    <p class="section-label fade-up" data-i18n="about.label">Quiénes somos</p>
+    <h2 class="section-title fade-up" data-i18n="about.title">Especializados en contenedores marítimos</h2>
     <div class="divider-rule"></div>
-    <p class="fade-up">Somos una empresa líder en la reparación y mantenimiento de contenedores marítimos. Nos dedicamos a entregar soluciones integrales y de alta calidad para satisfacer las necesidades de nuestros clientes en la industria del transporte mundial.</p>
-    <p class="fade-up">Operamos desde Guayaquil con maquinaria de origen europeo, personal asegurado y certificado en EPP, y un sistema digital de trazabilidad técnica para cada unidad intervenida.</p>
+    <p class="fade-up" data-i18n="about.p1">Somos una empresa líder en la reparación y mantenimiento de contenedores marítimos. Nos dedicamos a entregar soluciones integrales y de alta calidad para satisfacer las necesidades de nuestros clientes en la industria del transporte mundial.</p>
+    <p class="fade-up" data-i18n="about.p2">Operamos desde Guayaquil con maquinaria de origen europeo, personal asegurado y certificado en EPP, y un sistema digital de trazabilidad técnica para cada unidad intervenida.</p>
 
     <div class="mission-vision fade-up">
       <div class="mv-block">
-        <p class="mv-label">Misión</p>
-        <p class="mv-text">Ofrecer servicios de reparación y mantenimiento de manera eficiente, segura y sostenible, siendo el socio de confianza de nuestros clientes.</p>
+        <p class="mv-label" data-i18n="about.missionLabel">Misión</p>
+        <p class="mv-text" data-i18n="about.missionText">Ofrecer servicios de reparación y mantenimiento de manera eficiente, segura y sostenible, siendo el socio de confianza de nuestros clientes.</p>
       </div>
       <div class="mv-block">
-        <p class="mv-label">Visión</p>
-        <p class="mv-text">Ser líderes en la industria, innovando constantemente y estableciendo los más altos estándares de calidad en la reparación de contenedores.</p>
+        <p class="mv-label" data-i18n="about.visionLabel">Visión</p>
+        <p class="mv-text" data-i18n="about.visionText">Ser líderes en la industria, innovando constantemente y estableciendo los más altos estándares de calidad en la reparación de contenedores.</p>
       </div>
     </div>
   </div>
@@ -179,97 +195,93 @@
 
 <!-- RESPALDO -->
 <section id="respaldo">
-  <p class="section-label fade-up">Respaldo técnico</p>
-  <h2 class="section-title fade-up">Lo que nos distingue</h2>
+  <p class="section-label fade-up" data-i18n="stats.label">Respaldo técnico</p>
+  <h2 class="section-title fade-up" data-i18n="stats.title">Lo que nos distingue</h2>
 
   <div class="respaldo-grid">
     <div class="respaldo-item fade-up">
       <div class="respaldo-big">5+</div>
-      <div class="respaldo-label">Años de experiencia</div>
-      <p class="respaldo-desc">Trayectoria consolidada en la industria del transporte marítimo del Pacífico.</p>
+      <div class="respaldo-label" data-i18n="stats.s1label">Años de experiencia</div>
+      <p class="respaldo-desc" data-i18n="stats.s1desc">Trayectoria consolidada en la industria del transporte marítimo del Pacífico.</p>
     </div>
     <div class="respaldo-item fade-up">
       <div class="respaldo-big">365</div>
-      <div class="respaldo-label">Días del año</div>
-      <p class="respaldo-desc">Servicio disponible todos los días para adaptarse a los ciclos operativos de su flota.</p>
+      <div class="respaldo-label" data-i18n="stats.s2label">Días del año</div>
+      <p class="respaldo-desc" data-i18n="stats.s2desc">Servicio disponible todos los días para adaptarse a los ciclos operativos de su flota.</p>
     </div>
     <div class="respaldo-item fade-up">
       <div class="respaldo-big">EU</div>
-      <div class="respaldo-label">Maquinaria europea</div>
-      <p class="respaldo-desc">Herramientas y equipos de origen europeo que garantizan la calidad de cada acabado.</p>
+      <div class="respaldo-label" data-i18n="stats.s3label">Maquinaria europea</div>
+      <p class="respaldo-desc" data-i18n="stats.s3desc">Herramientas y equipos de origen europeo que garantizan la calidad de cada acabado.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
-    <div>
-      <p class="section-label fade-up">Hablemos</p>
-      <h2 class="section-title fade-up">Contáctenos</h2>
-      <p class="section-sub fade-up" style="margin-bottom: 0;">Solicite un servicio o más información. Respondemos a la brevedad.</p>
-  
-      <div class="contact-items">
-        <div class="contact-item fade-up">
-            <div class="contact-icon"><img src="assets/images/mail.svg" alt="Email"></div>
-            <div>
-            <p class="contact-detail-label">Email</p>
-            <a href="mailto:ventas@prsparella.com" class="contact-detail-val">ventas@prsparella.com</a>
-            <a href="mailto:operaciones@prsparella.com" class="contact-detail-val">operaciones@prsparella.com</a>
-          </div>
+  <div>
+    <p class="section-label fade-up" data-i18n="contact.label">Hablemos</p>
+    <h2 class="section-title fade-up" data-i18n="contact.title">Contáctenos</h2>
+    <p class="section-sub fade-up" style="margin-bottom: 0;" data-i18n="contact.sub">Solicite un servicio o más información. Respondemos a la brevedad.</p>
+
+    <div class="contact-items">
+      <div class="contact-item fade-up">
+        <div class="contact-icon"><img src="assets/images/mail.svg" alt="Email"></div>
+        <div>
+          <p class="contact-detail-label" data-i18n="contact.emailLabel">Email</p>
+          <a href="mailto:ventas@prsparella.com" class="contact-detail-val">ventas@prsparella.com</a>
+          <a href="mailto:operaciones@prsparella.com" class="contact-detail-val">operaciones@prsparella.com</a>
         </div>
-  
-        <div class="contact-item fade-up">
-            <div class="contact-icon"><img src="assets/images/whatsapp.svg" alt="WhatsApp"></div>
-            <div>
-            <p class="contact-detail-label">Teléfono / WhatsApp</p>
-            <a href="tel:+5930968060436" class="contact-detail-val">+593 96 806 0436</a>
-            <a href="tel:+5930963526562" class="contact-detail-val">+593 96 352 6562</a>
-          </div>
+      </div>
+      <div class="contact-item fade-up">
+        <div class="contact-icon"><img src="assets/images/whatsapp.svg" alt="WhatsApp"></div>
+        <div>
+          <p class="contact-detail-label" data-i18n="contact.phoneLabel">Teléfono / WhatsApp</p>
+          <a href="tel:+5930968060436" class="contact-detail-val">+593 96 806 0436</a>
+          <a href="tel:+5930963526562" class="contact-detail-val">+593 96 352 6562</a>
         </div>
-  
-        <div class="contact-item fade-up">
-            <div class="contact-icon"><img src="assets/images/maps.svg" alt="Dirección"></div>
-            <div>
-            <p class="contact-detail-label">Dirección</p>
-            <span class="contact-detail-val">Centro de Negocios El Terminal</span>
-            <span class="contact-detail-val">Local 20</span>
-          </div>
+      </div>
+      <div class="contact-item fade-up">
+        <div class="contact-icon"><img src="assets/images/maps.svg" alt="Dirección"></div>
+        <div>
+          <p class="contact-detail-label" data-i18n="contact.addressLabel">Dirección</p>
+          <span class="contact-detail-val">Centro de Negocios El Terminal</span>
+          <span class="contact-detail-val">Local 20</span>
         </div>
       </div>
     </div>
-  
-    <div>
-        <form class="contact-form fade-up" action="https://formspree.io/f/meepyrog" method="POST" id="contactForm">        <div class="form-row">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-          </div>
-          <div class="form-group">
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa">
-          </div>
-        </div>
-  
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="tel">Teléfono</label>
-            <input type="tel" id="tel" name="telefono">
-          </div>
-        </div>
-  
+  </div>
+
+  <div>
+    <form class="contact-form fade-up" action="https://formspree.io/f/meepyrog" method="POST" id="contactForm">
+      <div class="form-row">
         <div class="form-group">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje"></textarea>
+          <label for="nombre" data-i18n="contact.fname">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
         </div>
-  
-        <button type="submit" class="btn-submit">Enviar mensaje →</button>
-      </form>
-    </div>
-  </section>
+        <div class="form-group">
+          <label for="empresa" data-i18n="contact.company">Empresa</label>
+          <input type="text" id="empresa" name="empresa">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email" data-i18n="contact.email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="tel" data-i18n="contact.phone">Teléfono</label>
+          <input type="tel" id="tel" name="telefono">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mensaje" data-i18n="contact.message">Mensaje</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+      </div>
+      <button type="submit" class="btn-submit" data-i18n="contact.send">Enviar mensaje →</button>
+    </form>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -282,12 +294,17 @@
   </div>
   <p class="footer-copy">© 2026 Pacific Repair Services · Guayaquil, Ecuador</p>
   <ul class="footer-links">
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#ventajas">Ventajas</a></li>
-    <li><a href="#quienes">Nosotros</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
+    <li><a href="#ventajas" data-i18n="nav.why">Ventajas</a></li>
+    <li><a href="#quienes" data-i18n="nav.about">Nosotros</a></li>
+    <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
   </ul>
 </footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/5930968060436" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+  <img src="assets/images/whatsapp.svg" alt="WhatsApp">
+</a>
 
 <script src="main.js"></script>
 </body>
